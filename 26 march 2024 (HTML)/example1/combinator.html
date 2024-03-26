@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning combinators</title>
+
+    <style>
+
+        *{
+            font-family: cursive;
+        }
+        .cantainer h2{
+            color:rgb(58, 30, 182);
+        }
+        /* .cantainer p{
+            color: blue;
+        }
+         */
+         /* .cantainer>h2{
+            color: violet;
+         }
+         .cantainer>div>p{
+            color: teal;
+         }
+         .cantainer>div>div>p{
+            color: blueviolet;
+         } */
+         .cantainer>div>h2~p{
+            color: red;
+         }
+         .cantainer>div>h2+p{
+            color:brown;
+         }
+    </style>
+
+
+</head>
+<body>
+    <div class="cantainer">
+        <h2>heading 2</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, dicta!</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>
+            <h2>student data</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            
+            <div>
+                <h2>hello</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem rerum ratione repudiandae dolor nihil magnam, necessitatibus dignissimos veritatis ab quidem odio quis accusamus reprehenderit, quam accusantium laudantium commodi molestias. Animi?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, praesentium ea. Dolor ipsum corporis, inventore
+                    facere reiciendis nulla saepe, id sit iusto labore esse repellat ipsa qui quasi blanditiis odio?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
