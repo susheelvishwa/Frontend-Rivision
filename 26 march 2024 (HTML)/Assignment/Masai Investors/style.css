@@ -1,0 +1,53 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.dis {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.dis div {
+    margin: 0 5px;
+    height: ;
+}
+
+.dis div img{
+    height: 100px;
+}
+
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart-1 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.logo {
+    height: 30px;
+}
+
+.avtar{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} */
