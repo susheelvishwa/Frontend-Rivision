@@ -52,3 +52,6 @@ combinator: => 4
 
 # Box-model
 contant < padding < border < margin
+
+- every element in html is fundamently a box : margin , padding, border , content
+
