@@ -32,4 +32,23 @@ univarsal
 class
 id
 
+priority order
+ -  inline style > id   >   class > tag > universal  
+ -  1000         > 100  >   10    > 1   > 0
+ - SICTU 
 
+
+- .container > #div > div > h2 ==> score 112
+10+100+1+1 => 112
+
+- .container>h2, p{}
+
+combinator: => 4
+
+- descendent
+- child
+- genral sibling
+- adjacent sibling
+
+# Box-model
+contant < padding < border < margin
