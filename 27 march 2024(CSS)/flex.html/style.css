@@ -1,0 +1,21 @@
+.container>div{
+    border: 1px solid black;
+    height: 400px;
+    background-color: tomato;
+    width: 100px;
+}
+/* .container{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+} */
+
+.container{
+    width: 100%;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    display: flex;
+} 
