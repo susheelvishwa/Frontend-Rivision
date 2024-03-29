@@ -1,0 +1,85 @@
+.main {
+    border: 1px solid black;
+    height: auto;
+    font-family: 'inter';
+    background-color: rgb(244, 244, 244);
+}
+
+.navbar {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(68, 68, 68);
+    color: white;
+}
+
+.content {
+    color: black;
+    background-color: transparent;
+    /* Adjust background color as needed */
+}
+
+.home {
+    /* border: 1px solid black; */
+    height: 140px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.home>div>img {
+    /* height:100px; */
+    align-items: center;
+    padding: 19px;
+    width: 100px;
+    height: 100px;
+}
+
+.img {
+    border-radius: 10px;
+}
+
+.home-1>h3 {
+    text-align: center;
+}
+
+.home-1>p {
+    margin: 5px 15px 5px 90px;
+}
+
+.Home>h3 {
+    color: orange;
+}
+
+.Education>h3 {
+    color: blue;
+}
+
+.Project>h3 {
+    color: green;
+}
+
+.Skills>h3 {
+    color: red;
+}
+
+.Contact>h3 {
+    color: rgb(54, 123, 123);
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    .home {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        text-align: center;
+    }
+
+    .home>div>img {
+        width: 80px;
+        height: 80px;
+    }
+}
