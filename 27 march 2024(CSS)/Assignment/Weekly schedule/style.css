@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    font-family: 'inter';
+}
+
+.main {
+    border: 1px solid black;
+    height: 92vh;
+    margin: 10px 190px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+    width: 70%;
+    justify-content: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    padding: 30px 50px;
+}
+
+#container>div {
+    height: 30px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container>div:nth-child(even) {
+    background-color: rgb(255, 214, 239);
+}
+
+#container>div:nth-child(odd) {
+    background-color: rgb(250, 236, 170);
+}
+
+#container>div:nth-child(6n+1) {
+    background-color: rgb(188, 238, 242);
+}
+
+#container>div:nth-child(1) {
+    background-color: white;
+    border: none;
+}
+
+#last {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    grid-column: 1/7;
+    background-color: rgb(188, 238, 242);
+    text-align: end;
+}
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    font-family: Dancing Script;
+    margin-top: 20px;
+}
+
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.note {
+    text-align: start;
+    margin-right: 700px;
+}
