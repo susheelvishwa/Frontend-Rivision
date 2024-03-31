@@ -42,3 +42,24 @@ med screen
 # psudu-element --> ::
 
 # nth child
+
+
+center x and y -->  display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+x end y center -->  display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+
+if we aplly -disply as a flex
+by defoalt flex direction coloum --> 
+
+x --> justifiy content
+y --> align item>
+
+if we decler flex direction is colounm 
+
+x --> align item
+y --> justify content

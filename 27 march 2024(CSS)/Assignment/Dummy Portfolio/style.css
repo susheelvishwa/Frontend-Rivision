@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .main {
     border: 1px solid black;
     height: auto;
@@ -5,49 +9,58 @@
     background-color: rgb(244, 244, 244);
 }
 
-.navbar {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px;
-    background-color: rgb(68, 68, 68);
-    color: white;
-}
-
 .content {
     color: black;
     background-color: transparent;
-    /* Adjust background color as needed */
 }
 
 .home {
     /* border: 1px solid black; */
-    height: 140px;
     margin: 30px;
     background-color: white;
     border-radius: 10px;
     display: flex;
 }
-
 .home>div>img {
     /* height:100px; */
     align-items: center;
-    padding: 19px;
-    width: 100px;
-    height: 100px;
+    /* padding: 19px; */
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 20px;
 }
-
-.img {
-    border-radius: 10px;
-}
-
 .home-1>h3 {
     text-align: center;
 }
 
-.home-1>p {
-    margin: 5px 15px 5px 90px;
+.Navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333
+}
+
+.Navbar ul li {
+    padding: 10px;
+}
+
+.Navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .Navbar ul {
+        flex-direction: column;
+    }
+
+    .Navbar ul li {
+        text-align: center;
+    }
 }
 
 .Home>h3 {
@@ -70,16 +83,39 @@
     color: rgb(54, 123, 123);
 }
 
-@media screen and (min-width: 480px) and (max-width: 720px) {
-    .home {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
+@media only screen and (max-width:455px) {
+    .home{
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-1{
+        justify-content: center;
+    }
+    .home-1>p {
+        margin: 40px;
+        text-align: justify;
+        align-items: center;
+    }
+    .home>div>img{
+        height: 200px;
+        width: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:455px) {
+    .home {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    .home>div>img {
-        width: 80px;
-        height: 80px;
+    .home-1>p {
+        margin: 40px 80px ;
+        text-align: justify;
+        align-items: center;
     }
 }
