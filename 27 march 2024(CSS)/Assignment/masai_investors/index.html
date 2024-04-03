@@ -5,7 +5,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css">-->
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .head {
+            /* border: 1px solid black; */
+            padding: 0 3%;
+        }
+
+        .title>h1 {
+            text-align: center;
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #container {
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .cards {
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 5px;
+        }
+
+        .founder-image {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .logo {
+            width: 50%;
+            margin-top: -18px;
+        }
+
+        h3 {
+            font-size: 15px;
+            margin-bottom: -10px;
+        }
+
+
+        @media screen and (min-width: 480px) and (max-width: 720px) {
+            #container {
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                border: none;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            h6 {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (min-width: 144px) and (max-width: 480px) {
+            #container {
+                width: 97%;
+                grid-template-columns: repeat(1, 1fr);
+                border: none;
+            }
+
+            .three {
+                /* border: 1px solid black; */
+                gap: 5px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .imagee {
+                height: 100px;
+                /* border: 1px solid black; */
+                margin: 5px;
+                width: 99%;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            h6 {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,9 +118,12 @@
                 <h1>Bord Member</h1>
             </div>
             <div class="three">
-                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg" alt=""></div>
-                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/capria-logo.svg" alt=""></div>
-                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg" alt=""></div>
+                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg"
+                        alt=""></div>
+                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/capria-logo.svg" alt="">
+                </div>
+                <div><img class="imagee" src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg"
+                        alt=""></div>
             </div>
         </div>
     </center>
