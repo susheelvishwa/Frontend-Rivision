@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text" value="" />
+    <button onClick="catchValue()">Submit</button>
+    <!-- Show output here -->
+    <h1 id="output"></h1>
+</body>
+
+</html>
+
+<script>
+    function catchValue() {
+        var studentName = document.getElementById("name").value;
+        document.getElementById("output").innerText = studentName;
+    }
+</script>

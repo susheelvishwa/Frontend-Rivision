@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <p>This is a first p element.</p>
+    <p>This is a second p element.</p>
+    <p>This is a third p element.</p>
+</body>
+
+</html>
+<script>
+    // This won't work because querySelectorAll() method returns a NodeList.
+    // document.querySelectorAll("p").style.backgroundColor = "red";
+    // So we need to use for loop to select all elements
+
+    var list = document.querySelectorAll("p");
+    for (var i = 0; i < list.length; i++) {
+        list[i].style.backgroundColor = "teal";
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+
+<script>
+    let obj = {
+        title : "Mobile",
+        description:"This is iphone 15 pro",
+        img:"https://images.hindustantimes.com/tech/img/2022/08/11/960x540/iPhone_14_renders_iUpdate_1655100007286_1660216682187_1660216682187.PNG",
+        price:199
+    }
+    
+    
+
+    let container = document.querySelector("#container")
+    let title = document.createElement("p")
+    title.innerHTML = `<b>Product Title : </b> ${obj.title}`
+
+
+    let img = document.createElement("img")
+    img.src = obj.img
+
+    let price =  document.createElement("p")
+    price.innerHTML = obj.price
+
+    container.append(img,title, price)
+
+
+</script>
+</html>
