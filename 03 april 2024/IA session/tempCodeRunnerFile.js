@@ -1,8 +1,7 @@
-let canVote = voterAdhar || voterPan
-
-// if (canVote) {
-//     console.log("yes u can go and vote");
-// }
-// else {
-//     console.log("no");
+function arrjoin(arr, joiningele) {
+//   let bag = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     bag = bag + arr[i] + joiningele;
+//   }
+//   return bag;
 // }

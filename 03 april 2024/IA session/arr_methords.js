@@ -15,13 +15,17 @@
 
 let arr = [1, 2, 3, 4, 5, 56]
 
+
 function arrjoin(arr, joiningele) {
-    let bag = ""
-    for (let i = 0; arr.length; i++){
-        bag =  bag + arr[i] + joiningele
-    }
-    return bag
+  let bag = "";
+  for (let i = 0; i < arr.length; i++) {
+    bag = bag + arr[i] + joiningele;
+  }
+  return bag;
 }
 
-let ans = arrjoin(arr, "*")
+let ans = arrjoin(arr, "_")
 console.log(ans);
+
+
+
