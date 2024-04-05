@@ -1,29 +1,23 @@
-const productsCart = {
-  data: [],
-  addProduct: function (name, quantity, price) {
-    this.data.push({ name, quantity, price });
-  },
+let items = ["Rice", "Dal", "Salt"];
+let qty = [2, 3, 1];
+let price = [60, 50, 20];
 
+let Data = [];
+for (let i = 0; i < items.length; i++) {
+  let obj = {
+    name: items[i],
+    quantity: qty[i],
+    price: price[i],
+    totalprice: function () {
+      return this.quantity * this.price;
+    },
+  };
+  Data.push(obj);
+}
 
-  total: function () {
-    let totalPrice = 0;
-    this.data.forEach((product) => {
-      totalPrice += product.quantity * product.price;
-    });
-    return totalPrice;
-  },
-};
+let totalPrice = 0;
+for (let i = 0; i < Data.length; i++) {
+  totalPrice += Data[i].totalprice();
+}
 
-const products = [
-  { name: "Rice", quantity: 2, price: 60 },
-  { name: "Salt", quantity: 3, price: 50 },
-  { name: "Dal", quantity: 1, price: 20 },
-];
-
-
-products.forEach((product) => {
-  productsCart.addProduct(product.name, product.quantity, product.price);
-});
-
-
-console.log("Total:", productsCart.total());
+console.log(totalPrice);
