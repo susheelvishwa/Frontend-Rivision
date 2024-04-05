@@ -12,6 +12,7 @@ for (let i = 0; i < items.length; i++) {
       return this.quantity * this.price;
     },
   };
+  console.log(obj);
   Data.push(obj);
 }
 
