@@ -1,6 +1,6 @@
 function calculateSalesTotals(sales) {
   return sales.map((item) => {
-    const discount = item.discount || 0; // If discount is not provided, default to 0
+    const discount = item.discount || 0;
     const sale = item.original * (1 - discount);
     const total = sale * item.stock;
 
