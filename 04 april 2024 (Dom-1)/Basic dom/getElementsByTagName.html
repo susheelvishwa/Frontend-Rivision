@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Document Object</h1>
+    <h1>The getElementsByTagName() Method</h1>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <p>I am p1</p>
+    <p>I am p2</p>
+    <div>I am box</div>
+</body>
+
+</html>
+
+<script>
+    let h1 = document.getElementsByTagName("h1");
+    console.log(h1) // it should return 2 h1 tags
+
+    let list = document.getElementsByTagName("li");
+    console.log(list) // it should return 3 li tags
+
+    let div = document.getElementsByTagName("div")
+    console.log(div). // it should return 1 div tag
+</script>

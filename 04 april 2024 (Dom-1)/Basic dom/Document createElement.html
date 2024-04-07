@@ -1,0 +1,21 @@
+<!-- The createElement() function in JavaScript is used to programatically add elements to the DOM. -->
+
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+
+<script>
+    // Step1: Creating h1 tag
+    let heading = document.createElement("h1");
+    // Step2: Adding innerText 
+    heading.innerText = "Susheel Vishwakarma";
+    // Step3: Appending to body
+    document.querySelector("body").append(heading)
+</script>

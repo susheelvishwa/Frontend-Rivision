@@ -1,0 +1,26 @@
+<!-- Untill now, we are using onClick event listener, but we are using it inline to HTML element. -->
+
+
+
+<!-- document.addEventListener(event, function) -->
+
+<html>
+
+<head>
+    <title>OnClick</title>
+</head>
+
+<body>
+    <button>Like👍</button>
+</body>
+
+</html>
+
+
+<script>
+    document.querySelector("button").addEventListener("click", likeMe)
+
+    function likeMe() {
+        console.log("Someone liked me")
+    }
+</script>
