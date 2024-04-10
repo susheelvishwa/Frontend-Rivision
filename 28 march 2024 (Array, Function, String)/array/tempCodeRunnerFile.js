@@ -1,4 +1,7 @@
-var numbers = [2, 3, 4, 5, 6, 7];
-// numbers.pop();
-// numbers.pop();
-// console.log(numbers);
+var movies = ["bahuballi", "SpiderMan", "IronMan", "SuperMan", "hulk", "thor"];
+// for (var i = 0; i < movies.length; i++) {
+//   if (i == 2 || i == 4) {
+//     continue;
+//   }
+//   console.log(movies[i]);
+// }

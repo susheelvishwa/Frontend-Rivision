@@ -1,37 +1,37 @@
 // Creating an object using object literals
 let person = {
-  name: "John",
-  age: 30,
-  email: "john@example.com"
+  name: "susheel",
+  age: 21,
+  email: "pillu@gmail.com"
 };
 
 // Accessing object properties using dot notation
-console.log(person.name); // Output: John
+// console.log(person.name); 
 
 // Accessing object properties using bracket notation
-console.log(person["age"]); // Output: 30
+// console.log(person["age"]);
 
 // Updating object properties
-person.age = 35;
-console.log(person.age); // Output: 35
+// person.age = 22;
+// console.log(person.age);
 
 // Deleting object properties
-delete person.email;
-console.log(person.email); // Output: undefined
+// delete person.email;
+// console.log(person.email);
 
-Accessing Properties:
+// Accessing Properties:
+// let student_code = person["student_code"];
+// console.log(firstName);
 
-let firstName = obj["firstName"];
-console.log(firstName); // Output: "hello"
+
+// Updating Properties:
+// person["student_code"] = "cap01_064";
+// console.log(person);
+
+// Deleting Properties:
+// delete person["name"];
+// console.log(person);
 
 
-Updating Properties:
 
-obj["firstName"] = "newHello";
-console.log(obj); // Output: { firstName: 'newHello', lastName: 'World', add: 'anotherName' }
-
-Deleting Properties:
-
-delete obj["lastName"];
-console.log(obj); // Output: { firstName: 'newHello', add: 'anotherName' }
-
+console.log(person);
