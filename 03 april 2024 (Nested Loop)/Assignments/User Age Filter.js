@@ -9,11 +9,10 @@ for (var i = 0; i < nameArr.length; i++) {
   finalName.push(obj);
 }
 
+let newArr = finalName.filter(function (ele) {
+  return ele.age > 30
+})
 
-let narr = obj.filter(function (ele) {
-  return ele.age == 30;
-});
+console.log(newArr);
 
-console.log(obj);
 
-// console.log(finalName);
