@@ -14,6 +14,7 @@ innertext
 # document.getElementsByClassName(classname)
 # document.getElementsByTagName(tagname)
 # document.createElement(type)
+# element.setAttribute(attributeName, attributeValue)
 
 # Creating Elements
 Discussed how to create HTML elements dynamically using document.createElement() and append them to the DOM using .appendChild() or .append()
