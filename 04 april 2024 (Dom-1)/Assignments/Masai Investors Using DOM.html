@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #root{
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+            margin: 25px;
+            padding: 25px;
+        }
+        #root>div{
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #root>div img{
+            width: 100%;
+        }
+        #root>div p,h2,img{
+            text-align: center;
+        }
+        .logo{
+            /* border: 1px solid red; */
+            height: 15%;
+        }
+        .avtar{
+            border-radius: 15px 15px 0 0;
+            
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+<script>
+    var masai_investor = [
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+            name: "Vijay shekhar sharma",
+            post: "Founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+            name: "Kunal Shah",
+            post: "Founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+            name: "Amrish Rau",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+            name: "Sampad Swain",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg",
+            name: "Ankush Sachdeva",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg",
+            name: "Bhanu pratap singh",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/farid_ahsan_sharechat_1251f28141.png",
+            name: "Farid Ahsan",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg"
+        },
+        {
+            image: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg",
+            name: "Amit kumar Agarwal",
+            post: "founder & CEO",
+            logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/nobroker_rect_28c9778c30.svg"
+        }
+    ];
+
+    // console.log(masai_investor);
+
+    let container = document.querySelector("#root");
+
+        masai_investor.forEach(function (ele, i) {
+
+            let sapratediv = document.createElement("div")
+            sapratediv.setAttribute("class", "main")
+
+            let image = document.createElement("img")
+            image.src = ele.image   
+            image.setAttribute("class", "avtar")
+            // title.setAttribute("id", "title")
+            
+                 
+            
+            let name = document.createElement("h2")
+            name.innerText = ele.name
+            /* name.setAttribute("class", "name") */
+
+            let post = document.createElement("p")
+            post.innerText = ele.post
+            /* post.setAttribute("id", "post") */
+
+            let logo = document.createElement("img")
+            logo.src = ele.logo
+            logo.setAttribute("class", "logo")
+
+            sapratediv.append(image,name, post,logo)
+            container.append(sapratediv)
+
+        })
+</script>
+
+</html>
