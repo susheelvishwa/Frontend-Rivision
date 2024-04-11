@@ -3,6 +3,22 @@ onclick
 innerhtml
 innertext
 
+we perform CRUD opration
+
+- data => [{},{}]
+  -- document.get
+  -- document.queryselector
+  -- document.queryselectorall
+
+- create => document => object
+  -- document.createelement("tag)
+  -- parenttag.append(child1, child2, child3)
+
+- update => let img = document.quaryselector("img")
+  <!-- element.attribute = "value" -->
+  img.src = "link"
+  img.alt = "text"
+
 
 
 # document.getElementById(id_Name)
