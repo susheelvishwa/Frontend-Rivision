@@ -1,17 +1,36 @@
+<!-- Why do we need local storage with example ?
+Let’s write a small example and see how local storage is helpful. -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    local storage
-</body>
-</html>
 
-<script>
-    localStorage.setItem("Shivam", 101)
-    localStorage.setItem("susheel", 113)
-    localStorage.setItem("pillu", true);
-</script>
+<head>
+    <title>Image</title>
+    <style>
+        .main{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img height="200px"
+            src="https://cdn.theatlantic.com/media/img/photo/2019/03/national-puppy-day-photos/p01_556211362-1/original.jpg"
+            alt="" />
+        <div>
+            <p>Likes : <span id="likes"></span></p>
+            <p>Dislikes : <span id="dislikes"></span></p>
+        </div>
+        <div>
+            <button id="likeBtn">Like👌</button>
+            <button id="dislikeBtn">Dislike😢</button>
+        </div>
+    </div>
+</body>
+
+<!-- <script src="./script.js"></script> -->
+<!-- <script src="./scriptupdate.js"></script> -->
+<script src="./scriptupdateonemore.js"></script>
+</html>
