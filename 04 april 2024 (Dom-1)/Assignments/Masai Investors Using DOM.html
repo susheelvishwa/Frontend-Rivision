@@ -100,6 +100,9 @@
 
         masai_investor.forEach(function (ele, i) {
 
+            let headingdiv = document.createElement("div")
+            headingdiv.setAttribute("class", "heading")
+
             let sapratediv = document.createElement("div")
             sapratediv.setAttribute("class", "main")
 
@@ -124,7 +127,6 @@
 
             sapratediv.append(image,name, post,logo)
             container.append(sapratediv)
-
         })
 </script>
 
