@@ -33,6 +33,7 @@ Emphasized the importance of creating reusable functions for actions such as dis
 # Sorting Data:
 Strategies for sorting data displayed on a webpage were discussed, including the use of the .sort() method for arranging data in ascending or descending order.
 
-
 # Adding New Data:
 The lecture concluded with techniques for adding new elements to the data array and subsequently updating the DOM to reflect these additions.
+
+<These examples showcased how CRUD operations are applied in real-world scenarios, such as dynamically adding, updating, and displaying data based on user interactions.

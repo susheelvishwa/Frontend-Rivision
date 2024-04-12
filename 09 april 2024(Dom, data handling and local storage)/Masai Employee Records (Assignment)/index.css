@@ -1,0 +1,21 @@
+/* Fill CSS here */
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    align-items: center;
+    text-align: center;
+    color: rgb(61, 125, 198);
+}
+.main{
+    border: 1px solid black;
+    padding: 20px;
+    height: 440px;
+    display: flex;
+    justify-content: space-around;
+}
+form{
+    border: 1px solid black;
+    height: 85%;
+    padding: 20px;
+}

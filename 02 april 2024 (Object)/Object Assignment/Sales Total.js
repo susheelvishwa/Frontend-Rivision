@@ -20,6 +20,7 @@ var sales = [
   { item: "Nintendo Switch", stock: 4, original: 299.99 },
   { item: "PS2 Console", stock: 1, original: 299.99, discount: 0.8 },
   { item: "Nintendo 64", stock: 2, original: 199.99, discount: 0.65 },
+  { item: "avdhut", stock: 12, original: 19, discount: 5 },
 ];
 
 console.log(calculateSalesTotals(sales));

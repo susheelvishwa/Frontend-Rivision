@@ -173,12 +173,14 @@
     /* border: 1px solid rgb(43, 0, 255); */
     position: relative;
     width: 80%;
-    height: 70%;
+    height: 80%;
+    
     /* padding: 10px; */
 }
 .slider-1 {
     overflow: hidden;
     height: 90%;
+
 }
 .slides-1 {
     display: flex;
