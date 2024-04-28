@@ -36,4 +36,21 @@ Strategies for sorting data displayed on a webpage were discussed, including the
 # Adding New Data:
 The lecture concluded with techniques for adding new elements to the data array and subsequently updating the DOM to reflect these additions.
 
+# if we want to add some functinalty like searching some products and delete, sort lets see *DEMO2* example how to do that
+
+for **searching**
+
+| Search => input box => get input for searching
+- input => event => click =>
+    [{},{},{}]
+    filter => value === title
+    [{}]
+
+
+for delete we have 2 methords 
+- 1st is *pop*
+- 2ns is *splice*
+    (index, how many elements after that index do you wana remove)
+
+
 <These examples showcased how CRUD operations are applied in real-world scenarios, such as dynamically adding, updating, and displaying data based on user interactions.

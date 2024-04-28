@@ -83,11 +83,24 @@ function showData(arr) {
     let price = document.createElement("p");
     price.innerText = ele.price;
 
-    sapratediv.append(image, title, price);
+    let deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = "Delete🎁"
+    deleteBtn.addEventListener("click", function () {
+      deleteData(i);
+    })
+
+    sapratediv.append(image, title, price, deleteBtn);
     container.append(sapratediv);
   });
 }
 showData(products);
+
+
+function deleteData(i) {
+  products.splice(i, 1)
+  showData(products)
+}
+
 
 function searchData() {
   // console.log(inputBox.value);
@@ -96,7 +109,6 @@ function searchData() {
     return ele.title.toLowerCase() === value.toLowerCase();
   })
   // console.log(narr);
-
   if (narr.length > 0) {
     showData(narr);
   }
