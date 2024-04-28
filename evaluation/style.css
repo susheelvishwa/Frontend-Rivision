@@ -1,0 +1,19 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+header{
+    text-align: center;
+}
+
+#container{
+    margin-top: 30px;
+    border: 1px solid red;
+    height: 450px;
+    padding: 30px;
+}

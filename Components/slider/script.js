@@ -4,7 +4,7 @@ let slide = document.querySelectorAll(".slide");
 let counter = 0;
 let intervalId;
 
-// Set initial slide positions
+
 slide.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
 });
@@ -31,7 +31,6 @@ function handleNext() {
   slideimage();
 }
 
-// Start automatic sliding
 function startSlider() {
   intervalId = setInterval(() => {
     counter++;
@@ -42,7 +41,6 @@ function startSlider() {
   }, 1000); 
 }
 
-// Stop automatic sliding
 function stopSlider() {
   clearInterval(intervalId);
 }
@@ -56,5 +54,5 @@ next.addEventListener("click", () => {
   handleNext();
 });
 
-// Start automatic slider when the page loads
+
 startSlider();
