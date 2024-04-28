@@ -67,6 +67,7 @@ let container = document.querySelector("#container");
 let inputBox = document.querySelector("#navbar>div>input");
 let searchBtn = document.querySelector("#navbar-search");
 let selectPrice = document.querySelector("#navbar-select");
+let form = document.querySelector("form");
 
 function showData(arr) {
   container.innerHTML = "";
@@ -138,5 +139,26 @@ function sortData() {
   showData(narr)
 }
 
+function handleSubmit(e) {
+  e.preventDefault()
+  let input = e.target
+  let img = input[0].value
+  let title = input[1].value
+  let price = input[2].value
+  console.log(img, title, price);
+
+  let obj = {
+    image: img,
+    title: title,
+    price: price
+  }
+
+  products.push(obj)
+  showData(products)
+}
+
 searchBtn.addEventListener("click", searchData);
 selectPrice.addEventListener("click", sortData)
+form.addEventListener("submit", function (event) {
+  handleSubmit(event)
+})
