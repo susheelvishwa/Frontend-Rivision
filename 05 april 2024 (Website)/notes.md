@@ -47,10 +47,12 @@ for **searching**
     [{}]
 
 
-for delete we have 2 methords 
+for *delete* we have 2 methords 
 - 1st is *pop*
 - 2ns is *splice*
     (index, how many elements after that index do you wana remove)
 
+
+for *sorting*
 
 <These examples showcased how CRUD operations are applied in real-world scenarios, such as dynamically adding, updating, and displaying data based on user interactions.

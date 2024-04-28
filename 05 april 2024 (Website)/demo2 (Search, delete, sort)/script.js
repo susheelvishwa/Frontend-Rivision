@@ -66,6 +66,7 @@ var products = [
 let container = document.querySelector("#container");
 let inputBox = document.querySelector("#navbar>div>input");
 let searchBtn = document.querySelector("#navbar-search");
+let selectPrice = document.querySelector("#navbar-select");
 
 function showData(arr) {
   container.innerHTML = "";
@@ -117,4 +118,25 @@ function searchData() {
   }
 }
 
+
+function sortData() {
+  // console.log(selectPrice.value);
+  let value = selectPrice.value
+  let narr;
+
+  if (value === "asc") {
+    narr = products.sort(function (a, b) {
+      return a.price - b.price
+    })
+  }
+  else if(value === "desc"){
+    narr = products.sort(function (a, b) {
+      return b.price - a.price;
+    });
+  }
+
+  showData(narr)
+}
+
 searchBtn.addEventListener("click", searchData);
+selectPrice.addEventListener("click", sortData)
