@@ -6,10 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="navbar">
-        <button>Home</button>
-        <button>Login</button>
-        <button>Sign</button>
+    <div>
+
     </div>
 </body>
+
+<script>
+    let str = localStorage.getItem("string")
+    let div = document.querySelector("div")
+    div.innerHTML = `<h2>${str}</h2>`
+</script>
 </html>
