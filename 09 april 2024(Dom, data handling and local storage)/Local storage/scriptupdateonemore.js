@@ -11,8 +11,8 @@ if (localStorage.getItem("dogLike") == null) {
 
 //instead of initial value as 0, we should get item from LS
 var dislikeCount = localStorage.getItem("dogDislike");
-document.querySelector("#dislikes").innerText = dislikeCount;
 
+document.querySelector("#dislikes").innerText = dislikeCount;
 function likeFun() {
   likeCount++;
   document.querySelector("#likes").innerText = likeCount;
@@ -22,7 +22,6 @@ function likeFun() {
 }
 
 document.getElementById("dislikeBtn").addEventListener("click", dislikeFun);
-
 function dislikeFun() {
   dislikeCount++;
   document.querySelector("#dislikes").innerText = dislikeCount;

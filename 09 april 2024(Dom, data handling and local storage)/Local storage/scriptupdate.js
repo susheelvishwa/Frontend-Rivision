@@ -15,5 +15,3 @@ function dislikeFun() {
   //added line
   localStorage.setItem("dogDislike", dislikeCount);
 }
-
-
