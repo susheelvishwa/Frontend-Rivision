@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Cards Example</title>
+    <style>
+        .user-card{
+            border: 1px solid black;
+            /* background-color: red; */
+            display: grid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+        const User = ({ name, age, gender, email, image }) => {
+            return (
+                <div className="user-card">
+                    <div className="user-image">
+                        <img src={image} alt={name} />
+                    </div>
+                    <div className="user-details">
+                        <h2>{name}</h2>
+                        <p>Age: {age}</p>
+                        <p>Gender: {gender}</p>
+                        <p>Email: {email}</p>
+                    </div>
+                </div>
+            );
+        };
+
+        const UserList = ({ users }) => {
+            return (
+                <div className="user-list">
+                    {users.map((user) => (
+                        <User
+                            key={user.id}
+                            name={user.name}
+                            age={user.age}
+                            gender={user.gender}
+                            email={user.email}
+                            image={user.image}
+                        />
+                    ))}
+                </div>
+            );
+        };
+
+        function App() {
+            const users = [
+                {
+                    id: 1,
+                    name: "John",
+                    age: 23,
+                    gender: "male",
+                    email: "atuny0@sohu.com",
+                    image: "https://robohash.org/Terry.png?set=set4",
+                },
+                {
+                    id: 2,
+                    name: "Terry",
+                    age: 50,
+                    gender: "male",
+                    email: "terry@sohu.com",
+                    image: "https://robohash.org/Terry.png?set=set5",
+                },
+                {
+                    id: 3,
+                    name: "Jane",
+                    age: 25,
+                    gender: "female",
+                    email: "jane@sohu.com",
+                    image: "https://robohash.org/Terry.png?set=set6",
+                },
+            ];
+
+            return (
+                <div className="app">
+                    <h1>User Cards</h1>
+                    <UserList users={users} />
+                </div>
+            );
+        }
+
+        let rootElement = document.getElementById("root");
+        ReactDOM.createRoot(rootElement).render(<App />);
+    </script>
+</body>
+
+</html>
