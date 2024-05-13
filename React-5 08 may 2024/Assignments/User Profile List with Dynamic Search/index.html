@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        #root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 50px;
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .user-profile {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function UserProfile({ user }) {
+            return (
+                <div className="user-profile">
+                    <h2>{user.name}</h2>
+                    <p>Email: {user.email}</p>
+                    <p>Phone: {user.phone}</p>
+                </div>
+            );
+        }
+
+        function App() {
+            const [searchTerm, setSearchTerm] = React.useState('');
+            const [filteredUsers, setFilteredUsers] = React.useState(users);
+
+            const handleSearchInputChange = (event) => {
+                setSearchTerm(event.target.value);
+            };
+
+            React.useEffect(() => {
+                const filtered = users.filter(user =>
+                    user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    user.phone.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    user.email.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+                setFilteredUsers(filtered);
+            }, [searchTerm, users]);
+
+
+            return (
+                <div className="container">
+                    <input
+                        type="text"
+                        placeholder="Search by name..."
+                        className="search-input"
+                        value={searchTerm}
+                        onChange={handleSearchInputChange}
+                    />
+                    {filteredUsers.map(user => (
+                        <UserProfile key={user.id} user={user} />
+                    ))}
+                </div>
+            );
+        }
+
+        const users = [
+            { id: 1, name: 'Shivam Singh', email: 'shivam@gmail.com', phone: '9009972538' },
+            { id: 2, name: 'Tanu Jha', email: 'tanujha@gmail.com', phone: '7898261940' },
+            { id: 3, name: 'Vartika Bhujbal', email: 'pillu@gmail.com', phone: '9630791492' },
+            { id: 4, name: 'Susheel Vishwakarma', email: 'susheel@gmail.com.com', phone: '999198524' },
+            { id: 5, name: 'Shriya Singh', email: 'shriya@gmail.com', phone: '9841548555' },
+            { id: 6, name: 'Prachi Dubey', email: 'prach@gmail.com', phone: '487781545' },
+            { id: 7, name: 'Ankit Lodhi', email: 'ankit@gmail.com', phone: '788465456465' },
+            { id: 8, name: 'Abhay Patil', email: 'abhay@gmail.com', phone: '564545454' },
+            { id: 9, name: 'Shivanhu Gupta', email: 'shivandhu@gmail.com', phone: '44778886546' },
+        ];
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
