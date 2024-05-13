@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Cards Example</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+
+        function App() {
+
+            const [inputData, setInputData] = React.useState([""]);
+
+            // const handleChange = (e, i) => {
+            //     const newData = [...inputData];
+            //     newData[i] = e.target.value;
+            //     setInputData(newData);
+            // };
+
+            function handleChange(e, i) {
+                const newData = [...inputData];
+                newData[i] = e.target.value;
+                setInputData(newData);
+            }
+
+            // const addHobbies = () => {
+            //     setInputData(prevData => [...prevData, ""]);
+            // };
+
+            function addHobbies() {
+                setInputData(prevData => [...prevData, ""]);
+            }
+
+            // const removeHobbies = (i) => {
+            //     const newData = [...inputData];
+            //     newData.splice(i, 1);
+            //     setInputData(newData);
+            // };
+
+            function removeHobbies(i) {
+                const newData = [...inputData];
+                newData.splice(i, 1);
+                setInputData(newData);
+            }
+
+            return (
+                <div>
+                    {inputData.map((el, i) => (
+                        <div key={i}>
+                            <input type="text" value={el} onChange={(e) => handleChange(e, i)} />
+                            <button onClick={() => addHobbies()}>Add Hobbies</button>
+                            <button onClick={() => removeHobbies(i)} disabled={inputData.length <= 1}>Remove Hobbies</button>
+                        </div>
+                    ))}
+                </div>
+            );
+        }
+
+        let rootElement = document.getElementById("root");
+        ReactDOM.createRoot(rootElement).render(<App />);
+
+    </script>
+</body>
+
+</html>
