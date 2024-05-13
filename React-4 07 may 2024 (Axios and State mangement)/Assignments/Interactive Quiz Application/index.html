@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Component</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        function Quiz() {
+            const questions = [
+                {
+                    question: "My student code is",
+                    options: ["cap01_066", "cap01_064", "cap01_062", "cap01_060"],
+                    correctAnswer: "cap01_064",
+                    selectedAnswer: null
+                },
+                {
+                    question: "what is my name",
+                    options: ["vartika", "susheel", "shivam", "tanu"],
+                    correctAnswer: "susheel",
+                    selectedAnswer: null
+                }
+            ];
+
+            const [answers, setAnswers] = React.useState(new Array(questions.length).fill(null));
+            const [showScore, setShowScore] = React.useState(false);
+            const [score, setScore] = React.useState(0);
+
+            const handleAnswerSelect = (questionIndex, selectedOption) => {
+                const newAnswers = [...answers];
+                newAnswers[questionIndex] = selectedOption;
+                setAnswers(newAnswers);
+            };
+
+            const handleSubmit = () => {
+                let newScore = 0;
+                questions.forEach((question, index) => {
+                    if (question.correctAnswer === answers[index]) {
+                        newScore++;
+                    }
+                });
+                setScore(newScore);
+                setShowScore(true);
+            };
+
+            const restartQuiz = () => {
+                setShowScore(false);
+                setScore(0);
+                setAnswers(new Array(questions.length).fill(null));
+            };
+
+            return (
+                <div>
+                    {!showScore ? (
+                        <div>
+                            {questions.map((question, index) => (
+                                <div key={index}>
+                                    <h3>{question.question}</h3>
+                                    {question.options.map((option, optionIndex) => (
+                                        <div key={optionIndex}>
+                                            <input
+                                                type="radio"
+                                                id={`question${index}-option${optionIndex}`}
+                                                name={`question${index}`}
+                                                value={option}
+                                                checked={answers[index] === option}
+                                                onChange={() => handleAnswerSelect(index, option)}
+                                            />
+                                            <label htmlFor={`question${index}-option${optionIndex}`}>{option}</label>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                            <button onClick={handleSubmit}>Submit</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <h2>Your Score: {score} / {questions.length}</h2>
+                            <button onClick={restartQuiz}>Restart Quiz</button>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<Quiz />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
