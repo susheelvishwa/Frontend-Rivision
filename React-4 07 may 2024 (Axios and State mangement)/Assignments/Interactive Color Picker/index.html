@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive ColorPicker</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+<script type="text/babel">
+    // Your code will go here
+
+    function ColorPicker() {
+        const [color, setColor] = React.useState('');
+        const [isValid, setIsValid] = React.useState(true);
+
+        const handleColorChange = (e) => {
+            const colorValue = e.target.value;
+            const isValidColor = /^#[0-9A-F]{6}$/i.test(colorValue);
+            setColor(colorValue);
+            setIsValid(isValidColor);
+        };
+
+        return (
+            <div>
+                <input
+                    type="text"
+                    value={color}
+                    onChange={handleColorChange}
+                    placeholder="Enter HEX color code"
+                    style={{ marginRight: '10px' }}
+                />
+                <div
+                    style={{
+                        width: '600px',
+                        height: '300px',
+                        margin: '20px',
+                        backgroundColor: isValid ? color : 'transparent',
+                        border: '1px solid #ccc'
+                    }}
+                ></div>
+                {!isValid && <p style={{ color: 'red' }}>Invalid color code</p>}
+            </div>
+        );
+    }
+
+    ReactDOM.render(<ColorPicker />, document.getElementById('root'));
+</script>
+
+</html>
