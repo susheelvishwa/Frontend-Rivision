@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "4b75",
+      "title": "study",
+      "status": false
+    },
+    {
+      "id": "3f03",
+      "title": "gameing",
+      "status": false
+    },
+    {
+      "id": "d9b5",
+      "title": "talking with frinds",
+      "status": false
+    }
+  ]
+}
