@@ -1,8 +1,9 @@
-# Todo App
+# React useRef Examples with Vite
 
-A simple Todo application built with Vite, React, and `useState`.
+A React application built using Vite that demonstrates the use of the `useRef` hook for focusing an input field on mount, managing an uncontrolled input field, and interacting with a DOM element directly.
 
 ## Features
 
-- Add new todos
-- Mark todos as completed
+1. **Focusable Input Field**: Automatically focuses the input field when the component mounts.
+2. **Uncontrolled Input Field**: Manages an uncontrolled input field and retrieves its value in real-time without using state.
+3. **Interactive DOM Element**: Changes the background color of a DOM element when it is clicked.
