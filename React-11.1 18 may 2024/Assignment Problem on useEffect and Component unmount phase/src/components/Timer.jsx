@@ -32,7 +32,7 @@ function Timer() {
       style={{ border: "1px dashed black", padding: "10px", margin: "10px" }}
     >
       <h1>Count Down Timer</h1>
-      {}
+      {/* Display the current count */}
       <h4>{count}</h4>
     </div>
   );

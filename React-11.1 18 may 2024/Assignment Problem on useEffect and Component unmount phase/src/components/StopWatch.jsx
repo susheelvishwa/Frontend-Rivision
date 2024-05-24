@@ -18,21 +18,14 @@ function StopWatch() {
     return () => clearInterval(intervalId);
   }, [isRunning]);
 
-  const handleStartStop = () => {
-    setIsRunning((prevState) => !prevState);
-  };
-
-  const handleReset = () => {
-    setCount(0);
-    setIsRunning(false);
-  };
-
   return (
     <div style={{ border: "1px dashed red", padding: "10px", margin: "10px" }}>
       <h1>Stop Watch</h1>
       <h4>{count}</h4>
-      <button onClick={handleStartStop}>{isRunning ? "Stop" : "Start"}</button>
-      <button onClick={handleReset}>Reset</button>
+      <button onClick={() => setIsRunning(!isRunning)}>
+        {isRunning ? "Stop" : "Start"}
+      </button>
+      <button onClick={() => setCount(0)}>Reset</button>
     </div>
   );
 }
